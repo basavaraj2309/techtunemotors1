@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTune Motors</title>
+    <link rel="stylesheet" href="4.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .left-info, .right-info {
+            width: 45%; 
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TechTune Motors</div>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#booking">Booking </a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero">
+        
+                <img src="image1.jpg" alt="Image 1" height="300" width="500">
+           
+        <script src="script.js"></script>
+        <h1>Welcome to TechTune Motors</h1>
+        <p>Your Trusted Car Garage</p>
+        <a href="#services" class="cta-button">Learn More</a>
+    </section>
+    
+    <section id="services">
+        <h2>Our Services</h2>
+       
+        <div class="service">
+            <img src="image2.jpeg" alt="Service 1">
+            <h3>Oil Change</h3>
+            <p>We provide fast and efficient oil change services.</p>
+        </div>
+        <div class="service">
+            <img src="image3.jfif" alt="Service 2" height="300" width="500">
+            <h3>Tire Rotation</h3>
+            <p>Ensure even tire wear with our tire rotation services.</p>
+        </div>
+        <div class="service">
+            <img src="download (1).jfif" alt="Service 3" height="300" width="500">
+            <h3>Brake Repair</h3>
+            <p>If you're looking for the best brake repair service in your area</p>  
+        </div>
+        <div class="service">
+            <img src="download (2).jfif" alt="Service 3"  height="300" width="500">
+            <h3>Engine Diagnostics</h3>  
+            <p>Is your vehicle suffering from a fault or issue? Bring it in our garage and we'll put our diagnostics tools to good use to find the fault and fix it.</p>
+        </div>
+        <div class="service">
+            <img src="download (3).jfif" alt="Service 3"  height="300" width="500">
+            <h3>Car Maintenance</h3>  
+        </div>
+        
+    </section>
+    <section id="booking">
+        <h1> Booking Services</h1>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required><br><br>
+    
+            <label for="vehicle">Vehicle Make and Model:</label>
+            <input type="text" id="vehicle" name="vehicle" required><br><br>
+            
+            <label for="date">Booking Date:</label>
+            <input type="date" id="date" required><br><br>
+            
+            <label for="time">Booking Time:</label>
+            <input type="time" id="time" required><br><br>
+            
+            <label for="service">Select Service:</label>
+            <select id="service" required>
+                <option value="Oil Change">Oil Change</option>
+                <option value="Tire Rotation">Tire Rotation</option>
+                <option value="Brake Inspection">Brake Inspection</option>
+                <option value="Engine Diagnostics">Engine Diagnostics</option>
+                <option value="Car Maintenance">Car Maintenance</option>
+            </select><br><br>
+            <label for="comments">comments</label><br>
+            <textarea id="comments" name="comments" rows="4"></textarea><br><br>
+            
+            <button type="submit">Submit Booking</button>
+        </form>
+    
+        <script>
+            document.getElementById("bookingForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var phone = document.getElementById("phone").value;
+                var vehicle = document.getElementById("vehicle").value;
+                var date = document.getElementById("date").value;
+                var time = document.getElementById("time").value;
+                var service = document.getElementById("service").value;
+                var comments = document.getElementById("comments").value;
+                var bookingDetails = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nDate: ${date}\nTime: ${time}\nService: ${service}\ncomments: ${comments}\nvehicle: ${vehicle}`;
+                alert("Booking Details:\n\n" + bookingDetails);
+            });
+        </script>
+    <div class="container">
+        <div class="left-info">
+            <h2>Quick Information</h2>
+            <p> <b>Mode of Payment</b>
+                <br>
+                Cash, Master Card, Visa Card, Debit Cards, Credit CardMode of Payment
+</p>
+        </div>
+        <div class="right-info">
+            <h2>Timings</h2>
+            <p>Mon - Sun<br>
+                Open 24 Hrs</p>
+        </div>
+    </div>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <address>
+            <p><strong>Address:</strong>  161, 5th Phase Sachidhananda Nagar, Rajarajeshwari Nagar, Bangalore - 560098 (Near Double Road Essar Petrol Bunk)
+            </p>
+            <p><strong>Phone:</strong> (+91) 9900402314</p>
+            <p><strong>Email:</strong> info@techtunemotors.com</p>
+        </address>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>TechTune Motors has been a trusted name in car maintenance and repair for over two decades. We are committed to keeping your vehicle in top-notch condition.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 TechTune Motors</p>
+    </footer>
+    
+</body>
+</html>
